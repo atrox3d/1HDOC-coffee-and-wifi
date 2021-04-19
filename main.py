@@ -14,6 +14,12 @@ Bootstrap(app)
 
 class CafeForm(FlaskForm):
     cafe = StringField('Cafe name', validators=[DataRequired()])
+    location = StringField('Cafe location on Google Maps (URL)', validators=[DataRequired()])
+    opening = StringField('Cafe opening time', validators=[DataRequired()])
+    closing = StringField('Cafe closing time', validators=[DataRequired()])
+    coffee = StringField('Coffee rating', validators=[DataRequired()])
+    wifi = StringField('Wifi rating', validators=[DataRequired()])
+    power = StringField('Power sockets', validators=[DataRequired()])
     submit = SubmitField('Submit')
 
 # Exercise:
