@@ -25,7 +25,13 @@
                 {% for cafe in cafes %}
                 <tr>
                     {% for col in cafe %}
-                    <td>{{ col }}</td>
+                    <td>
+                    {% if col.startswith('http') %}
+                        <a href="{{ col }}">Maps Link</a>
+                    {% else %}
+                        {{ col }}
+                    {% endif %}
+                    </td>
                     {% endfor%}
                  </tr>
                 {% endfor%}
